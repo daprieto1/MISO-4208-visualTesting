@@ -5,7 +5,7 @@ var CypressService = {};
 
 CypressService.execute = testFile => {
     console.log(`CypressService execute start: testFile = ${testFile}`);
-    return UtilsService.executeCommand(`sudo ./node_modules/cypress-cli/bin/cypress run --spec ${testFile}`);
+    return UtilsService.executeCommand(`./node_modules/cypress-cli/bin/cypress run --spec ${testFile}`);
 };
 
 module.exports = CypressService;
