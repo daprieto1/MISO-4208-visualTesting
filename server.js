@@ -19,7 +19,8 @@ mongoose.connect(mongoUri, function (err, res) {
     } else {
         console.log('Succeeded connected');
     }
-});
+})
+    .catch(err => console.log(err));
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
 app.use(morgan('dev'));                                         // log every request to the console
