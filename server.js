@@ -12,7 +12,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var Execution = require('./models/Execution');
 
 // configuration =================    
-var mongoUri = process.env.MONGODB_URI || "";
+var mongoUri = process.env.MONGODB_URI || "mongodb://heroku_d30n00bf:r2i994t3j68i9i2sj8vfitj20@ds023468.mlab.com:23468/heroku_d30n00bf";
 mongoose.connect(mongoUri, function (err, res) {
     if (err) {
         console.log('ERROR connecting');

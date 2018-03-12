@@ -19,7 +19,7 @@ var saveExecution = execution => {
     });
 };
 
-ExecutionService.createExecution = execution => {
+ExecutionService.createExecution = (execution) => {
     return new Promise((resolve, reject) => {
         var timestamp = (new Date()).getTime();
         var execution = new Execution({
@@ -37,7 +37,6 @@ ExecutionService.createExecution = execution => {
             .then(() => saveExecution(execution))
             .then(newExecution => resolve(newExecution))
             .catch(err => reject(err));
-        resolve(execution);
     });
 };
 
