@@ -12,7 +12,8 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var Execution = require('./models/Execution');
 
 // configuration =================    
-mongoose.connect("mongodb://heroku_d30n00bf:r2i994t3j68i9i2sj8vfitj20@ds023468.mlab.com:23468/heroku_d30n00bf", function (err, res) {
+var mongoUri = process.env.MONGODB_URI || "";
+mongoose.connect(mongoUri, function (err, res) {
     if (err) {
         console.log('ERROR connecting');
     } else {
@@ -39,9 +40,10 @@ var executionRouter = require('./controllers/ExecutionController')(Execution);
 app.use('/api/execution', executionRouter);
 
 app.get('*', function (req, res) {
-    res.sendfile('./piublic/index.html'); 
+    res.sendfile('./piublic/index.html');
 });
 
 // listen (start app with node server.js) ======================================
-app.listen(8080);
+var port = process.env.PORT || 8080;
+app.listen(port);
 console.log("App listening on port 8080");
