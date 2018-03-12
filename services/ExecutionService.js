@@ -37,6 +37,7 @@ ExecutionService.createExecution = execution => {
             .then(() => saveExecution(execution))
             .then(newExecution => resolve(newExecution))
             .catch(err => reject(err));
+        resolve(execution);
     });
 };
 

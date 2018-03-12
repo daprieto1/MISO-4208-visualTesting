@@ -16,7 +16,7 @@ var routes = function (Execution) {
         })
         .post(function (req, res) {
             ExecutionService.createExecution()
-                .then(execution => res.send(execution))
+                .then(execution => res.status(200).send(execution))
                 .catch(err => res.status(500).send(err));
         });
 
