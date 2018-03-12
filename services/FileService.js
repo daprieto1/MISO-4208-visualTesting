@@ -10,7 +10,7 @@ var FileService = {};
 FileService.cleanScrennshotFolder = () => {
     return new Promise((resolve, reject) => {
         fs.rmdir('cypress/screenshots', (err) => {
-            if(err) reject(err);
+            if(err) resolve(err);
             resolve();
         });
     });    
