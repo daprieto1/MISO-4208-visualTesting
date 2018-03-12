@@ -8,7 +8,12 @@ var FileService = {};
  * Delete all the files into cypress/screenshot
  */
 FileService.cleanScrennshotFolder = () => {
-    return UtilsService.executeCommand('rm -r cypress/screenshots');
+    return new Promise((resolve, reject) => {
+        fs.rmdir('cypress/screenshots', (err) => {
+            if(err) reject(err);
+            resolve();
+        });
+    });    
 }
 
 /**
