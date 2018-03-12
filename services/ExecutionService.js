@@ -27,8 +27,6 @@ ExecutionService.createExecution = execution => {
             afterImgUri: `public/images/${timestamp}/T1-after.png`
         });
 
-        Utils.executeCommand('pwd');
-
         /*FileService.cleanScrennshotFolder()
             .then(() => CypressService.execute('cypress/integration/randomColorTest.js'))*/
         CypressService.execute('cypress/integration/randomColorTest.js')
