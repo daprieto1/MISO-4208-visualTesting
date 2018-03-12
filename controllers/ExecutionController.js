@@ -1,3 +1,5 @@
+Promise = require('promise');
+
 var express = require('express');
 
 var ExecutionService = require('./../services/ExecutionService');

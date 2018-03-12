@@ -1,3 +1,5 @@
+Promise = require('promise');
+
 var UtilsService = require('./UtilsService');
 var CypressService = {};
 

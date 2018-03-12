@@ -1,5 +1,6 @@
 var fs = require('fs');
 var resemblejsCompare = require('resemblejs').compare;
+Promise = require('promise');
 
 var ResembleService = {};
 

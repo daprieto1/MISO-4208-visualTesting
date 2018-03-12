@@ -25,6 +25,7 @@
     "mongoose": "^5.0.9",
     "morgan": "~1.2.2",
     "node-run-cmd": "^1.0.1",
+    "promise": "^8.0.1",
     "resemblejs": "^2.10.0"
   }
 }

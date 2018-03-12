@@ -1,5 +1,6 @@
 var fs = require('fs');
 var nrc = require('node-run-cmd');
+Promise = require('promise');
 
 var Utils = {};
 

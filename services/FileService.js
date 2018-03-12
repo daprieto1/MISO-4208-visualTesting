@@ -1,5 +1,6 @@
 var fs = require('fs');
 var UtilsService = require('./UtilsService');
+Promise = require('promise');
 
 var FileService = {};
 
