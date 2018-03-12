@@ -28,12 +28,11 @@ ExecutionService.createExecution = (execution) => {
             beforeImgUri: `public/images/${timestamp}/T1-before.png`,
             afterImgUri: `public/images/${timestamp}/T1-after.png`
         });
-
         FileService.cleanScrennshotFolder()
-            .then(() => CypressService.execute('cypress/integration/randomColorTest.js'))
-            .then(() => FileService.copyScreenshotFolder(timestamp))
-            .then(() => ResembleService.compare(execution))
-            .then(data => execution = data)
+            //.then(() => CypressService.execute('cypress/integration/randomColorTest.js'))
+            //.then(() => FileService.copyScreenshotFolder(timestamp))
+            //.then(() => ResembleService.compare(execution))
+            //.then(data => execution = data)
             .then(() => saveExecution(execution))
             .then(newExecution => resolve(newExecution))
             .catch(err => reject(err));
